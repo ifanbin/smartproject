@@ -2,3 +2,10 @@ spring:
   profiles:
     active: dev #默认为开发环境
 
+# swagger
+swagger:
+  enabled: true
+  title: 灵光项目管理 接口文档
+  description: 旨在做一个灵活方便的项目管理系统
+  version: 1.0.0.RELEASE
+  contact.name: hzlgit

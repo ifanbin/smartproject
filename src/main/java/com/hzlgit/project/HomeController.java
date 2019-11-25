@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+/*不受权限控制，生产环境删除*/
 public class HomeController {
     private final static Logger log = LoggerFactory.getLogger(HomeController.class);
 

@@ -9,3 +9,6 @@ swagger:
   description: 旨在做一个灵活方便的项目管理系统
   version: 1.0.0.RELEASE
   contact.name: hzlgit
+  base-package: com.hzlgit.project
+  base-path: /api/**, /sign-in, /sign-up,/sign-up/**, /test #指定了swagger可访问的url
+  exclude-path: /error, /ops/**

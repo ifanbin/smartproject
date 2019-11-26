@@ -1,2 +1,6 @@
 server:
   port: 9080
+
+#我的设置信息
+myconfig:
+  nwflag: 我的开发环境

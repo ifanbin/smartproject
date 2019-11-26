@@ -24,4 +24,17 @@ public class RedisTest {
     public void get(){
         System.out.println("get redisTemplate=="+(redisTemplate.opsForValue().get("days")));
     }
+
+    @Test
+    public void another(){
+        if(!redisTemplate.hasKey("days")){
+            System.out.println("no");
+            redisTemplate.opsForValue().set("days", "wxe");
+
+        }else{
+            System.out.println("yes");
+            System.out.println("redisTemplate=="+(redisTemplate.opsForValue().get("days")));
+
+        }
+    }
 }

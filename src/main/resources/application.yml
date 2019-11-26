@@ -12,3 +12,10 @@ swagger:
   base-package: com.hzlgit.project
   base-path: /api/**, /sign-in, /sign-up,/sign-up/**, /test #指定了swagger可访问的url
   exclude-path: /error, /ops/**
+
+tomcat:
+  uri-encoding: UTF-8
+
+#我的设置信息
+myconfig:
+  nwflag: 我的特殊环境

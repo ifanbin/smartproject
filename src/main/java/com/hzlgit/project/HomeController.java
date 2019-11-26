@@ -1,9 +1,12 @@
 package com.hzlgit.project;
 
 import cn.hutool.core.exceptions.StatefulException;
+import com.hzlgit.project.config.MyConfig;
 import com.hzlgit.project.customer.Customer;
+import lombok.Value;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,10 +18,22 @@ import org.springframework.web.bind.annotation.RestController;
 public class HomeController {
     private final static Logger log = LoggerFactory.getLogger(HomeController.class);
 
+    @Autowired
+    private MyConfig myConfig;
+
+    public MyConfig getMyConfig() {
+        return myConfig;
+    }
+
+    public void setMyConfig(MyConfig myConfig){
+        this.myConfig = myConfig;
+    }
+
     @RequestMapping("/")
     public String home(){
         log.info("access home! \noutput: hello world!");
-        return "hello world";
+        log.info("当前环境："+this.myConfig.getNwflag());
+        return "hello world"+this.myConfig.getNwflag();
     }
 
     @RequestMapping("/testException/{id}")

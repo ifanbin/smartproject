@@ -33,7 +33,7 @@ public class HomeController {
     public String home(){
         log.info("access home! \noutput: hello world!");
         log.info("当前环境："+this.myConfig.getNwflag());
-        return "hello world"+this.myConfig.getNwflag();
+        return "hello world  "+this.myConfig.getNwflag();
     }
 
     @RequestMapping("/testException/{id}")
